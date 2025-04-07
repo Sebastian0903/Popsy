@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-ripple{background-color: #a70257 !important;}
+.mat-mdc-button-ripple{background-color: #a70257 !important;}
+
+.button.mdc-button.mdc-button--unelevated.mat-mdc-unelevated-button.mat-unthemed.mat-mdc-button-base{background-color: #a70257 !important;}
+.mat-mdc-unelevated-button:not(:disabled){background-color: #a70257 !important;}

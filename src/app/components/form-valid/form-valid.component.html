@@ -1,0 +1,19 @@
+<div class="w-full h-full flex align-center justify-center p-6 lg:p-24">
+
+    <div class="border borde-gray-200 rounded p-8 max-w-[400px] self-center">
+        <img src="/popsy.webp" class="w-full h-auto" />
+        <form class="example-form flex flex-col" [formGroup]="formUser" (ngSubmit)="submit()">
+            <mat-form-field class="example-full-width">
+              <mat-label>Usuario</mat-label>
+              <input matInput placeholder="Usuario" value="" formControlName="username">
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" matInput placeholder="Contraseña" value="" formControlName="pass">
+            </mat-form-field>
+
+            <button mat-flat-button>Enviar Prueba</button>
+        </form>
+    </div>
+</div>
