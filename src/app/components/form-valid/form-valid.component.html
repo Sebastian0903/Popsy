@@ -1,19 +1,31 @@
-<div class="w-full h-full flex align-center justify-center p-6 lg:p-24">
-
-    <div class="border borde-gray-200 rounded p-8 max-w-[400px] self-center">
+<div class="relative w-full h-full flex align-center justify-center bg-img-popsy z-[10]">
+<div class="relative w-full h-full flex align-center justify-center p-6 lg:p-24 bg-blur-popsy z-[11]"></div>
+    <div class="bg-white border absolute borde-gray-200 rounded p-8 max-w-[400px] self-center z-[20]">
         <img src="/popsy.webp" class="w-full h-auto" />
         <form class="example-form flex flex-col" [formGroup]="formUser" (ngSubmit)="submit()">
             <mat-form-field class="example-full-width">
-              <mat-label>Usuario</mat-label>
-              <input matInput placeholder="Usuario" value="" formControlName="username">
+                <mat-label>Usuario</mat-label>
+                <input matInput 
+                    type="email" 
+                    placeholder="Usuario"
+                    formControlName="username"
+                >
             </mat-form-field>
-          
+            <div class="bg-red-100 m-[-19px_0px_20px_0px] text-red-500 px-2 py-1 text-[12px]" *ngIf="!formUserSignalBool() && formUserSignal() != ''">
+                {{formUserSignal()}}
+            </div>
+            
             <mat-form-field class="example-full-width">
                 <mat-label>Contraseña</mat-label>
                 <input type="password" matInput placeholder="Contraseña" value="" formControlName="pass">
             </mat-form-field>
-
+            <div class="bg-red-100 m-[-19px_0px_20px_0px] text-red-500 px-2 py-1 text-[12px]" *ngIf="!formPassSignalBool() && formPassSignal() != ''">
+                {{formPassSignal()}}
+            </div>
+    
             <button mat-flat-button>Enviar Prueba</button>
         </form>
     </div>
 </div>
+
+

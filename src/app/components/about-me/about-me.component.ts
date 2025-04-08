@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './about-me.component.css'
 })
 export class AboutMeComponent {
+  contadorSignal = signal(10)
 
+  incrementSig(value: number){
+    this.contadorSignal.update((current)=> current + value)
+  }
+
+  
 }

@@ -8,3 +8,33 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .button.mdc-button.mdc-button--unelevated.mat-mdc-unelevated-button.mat-unthemed.mat-mdc-button-base{background-color: #a70257 !important;}
 .mat-mdc-unelevated-button:not(:disabled){background-color: #a70257 !important;}
+
+.mat-form-field-wrapper {
+    padding-bottom: 0 !important; /* Elimina espacio inferior */
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.5em 0 !important; /* Ajusta padding interno */
+    border-top: 0 !important; /* Elimina espacio superior */
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0 0.75em !important; /* Ajusta padding horizontal */
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    top: 0 !important; /* Alinea el borde con el contenido */
+}
+
+.bg-img-popsy{
+    
+    background-image: url('../public/POPSY-fondo.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.bg-blur-popsy{
+    background: #a702576c;
+    backdrop-filter: blur(12px);
+    content: "fdkjfdj";
+}
